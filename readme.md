@@ -2,7 +2,7 @@
 
 All code shown here is just an example. 
 
-# Role Manager Markup/Form
+### Role Manager Markup/Form
 ```php
 <form action="{{ $routeAction }}" method="post">
     <!-- Include roles manager markup -->
@@ -16,7 +16,7 @@ All code shown here is just an example.
 </form>
 ```
 
-# Role Manager Index List
+### Role Manager Index List
 ```php
 <a name="" id="" class="btn btn-secondary -mt-2" href="@route('admin.users.index')" role="button"> <i class="fa fa-arrow-left"></i> Back To List</a>
 @include('rpmanager::roles.index', [
@@ -27,7 +27,7 @@ All code shown here is just an example.
 ])
 ```
 
-# Role Manager Controller Action
+### Role Manager Controller Action
 ```php
 use Vortechron\RPManager\Models\Role;
 
@@ -78,7 +78,7 @@ class RoleManager extends Controller
 
 ```
 
-# Role Manager Roles Dropdown
+### Role Manager Roles Dropdown
 ```php
 <form action="@route('admin.users.update', $user)" method="post" class="mt-4">
     @csrf
@@ -86,5 +86,15 @@ class RoleManager extends Controller
 
     <button type="submit" class="btn btn-primary">Save</button>
 </form>
+```
+
+### Role Manager Roles Dropdown
+```php
+@can('manage roles')
+@include('rpmanager::components.roles_button', [
+    'route' => route('admin.roles.index'), 
+    'class' => '-mt-2']
+)
+@endcan
 ```
 
