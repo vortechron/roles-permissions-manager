@@ -1,0 +1,30 @@
+{
+    "name": "vortechron/roles-permissions-manager",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "vortechron",
+            "email": "sayaamiruladli@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Vortechron\\RPManager\\": "src"
+        },
+        "files": [
+            "src/helpers.php"
+        ]
+    },
+    "minimum-stability": "dev",
+    "require": {
+        "spatie/laravel-permission": "2.38.0"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Vortechron\\RPManager\\RPProvider"
+            ]
+        }
+    },
+}
