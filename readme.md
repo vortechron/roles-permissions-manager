@@ -1,6 +1,7 @@
 ## Usage
 
 All code shown here is just an example. 
+Tightly coupled with Bootstrap 4.
 
 ### Role Manager Markup/Form
 ```php
@@ -96,5 +97,12 @@ class RoleManager extends Controller
     'class' => '-mt-2']
 )
 @endcan
+```
+
+### Roles Route Helper
+```php
+Route::group(['middleware' => ['permission:manage roles']], function () {
+    rpmanager_routes(RoleManager::class);
+});
 ```
 
