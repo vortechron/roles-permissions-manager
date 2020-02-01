@@ -78,7 +78,7 @@ class RoleManager extends Controller
 
 ```
 
-### Role Manager Roles Dropdown
+### Roles Dropdown
 ```php
 <form action="@route('admin.users.update', $user)" method="post" class="mt-4">
     @csrf
@@ -88,7 +88,7 @@ class RoleManager extends Controller
 </form>
 ```
 
-### Role Manager Roles Dropdown
+### Roles Button Link
 ```php
 @can('manage roles')
 @include('rpmanager::components.roles_button', [
